@@ -2,32 +2,20 @@ import React from "react";
 
 class App extends React.Component {
   state = {
-    count: 0,
+    isLoading: true,
+    movies: [], // 나중에 사용할 수 있는 default 값을 먼저 선언 해줌(필수는 아니지만 선언해주는것은 좋은 습관이다.)
   };
-  add = () => {
-    this.setState((current) => ({ count: current.count + 1 }));
-  };
-  minus = () => {
-    this.setState((current) => ({ count: current.count - 1 }));
-  };
+
   componentDidMount() {
-    console.log("componentDidMount");
+    setTimeout(() => {
+      this.setState({ isLoading: false, isTest: "'isTest'" }); // isEdit: true 은 선언한 state에 없지만 여기서도 추가할 수 있다.
+    }, 3000);
   }
-  componentDidUpdate() {
-    console.log("componentDidUpdate");
-  }
-  componentWillUnmount() {
-    console.log("componentWillUnmount");
-  }
+
   render() {
-    console.log("render");
-    return (
-      <div>
-        <h1>From state {this.state.count}</h1>
-        <button onClick={this.add}>Add</button>
-        <button onClick={this.minus}>Minus</button>
-      </div>
-    );
+    const { isLoading } = this.state;
+    const { isTest } = this.state;
+    return <div>{isLoading ? "Loading..." : `state is update ${isTest}`}</div>;
   }
 }
 
