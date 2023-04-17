@@ -4,21 +4,19 @@ import "./Movie.css";
 
 function Movie({ year, title, summary, poster, genres }) {
   return (
-    <div className="moive">
+    <div className="movie">
+      <img src={poster} alt={title} title={title} />
       <div className="movie__data">
-        <img src={poster} alt={title} title={title} />
-        <h3 className="movie__title" style={{ backgroundColor: "red" }}>
-          {title}
-        </h3>
+        <h3 className="movie__title">{title}</h3>
         <h5 className="movie__year">{year}</h5>
-        <div className="genres">
+        <ul className="movie__genres">
           {genres.map((genre, index) => (
-            <li key={index} className="genres__genre">
+            <li key={index} className="">
               {genre}
             </li>
           ))}
-        </div>
-        <p className="movie__summary">{summary}</p>
+        </ul>
+        <p className="movie__summary">{summary.slice(0, 180)}...</p>
       </div>
     </div>
   );
