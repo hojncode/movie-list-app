@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hojncode/movie-list-app/static/css/main.789f7ac6.css",
+    "main.js": "/hojncode/movie-list-app/static/js/main.0e248d97.js",
+    "index.html": "/hojncode/movie-list-app/index.html",
+    "main.789f7ac6.css.map": "/hojncode/movie-list-app/static/css/main.789f7ac6.css.map",
+    "main.0e248d97.js.map": "/hojncode/movie-list-app/static/js/main.0e248d97.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.789f7ac6.css",
+    "static/js/main.0e248d97.js"
+  ]
+}
